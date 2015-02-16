@@ -1,6 +1,6 @@
 public class Revision {
 	
-	public int fibonacci(int index){
+	public int fibonacci(int index) {
 		switch(index){
 			case 1 : return 0;
 			case 2 : return 1;
@@ -8,7 +8,14 @@ public class Revision {
 		} 
 	}
 
-	public int factorial (int number){
+	public int factorial (int number) {
 		return (number <= 0) ? 1 : number * factorial(number-1);
+	}
+
+	public int[] add (int[] numbers, int toBeIncrementBy) {
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = numbers[i]+toBeIncrementBy;
+		}
+		return numbers;
 	}
 }

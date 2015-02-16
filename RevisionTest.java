@@ -13,10 +13,32 @@ public class RevisionTest{
 		Revision r = new Revision();
 		assertEquals(1,r.factorial(1));
 	}
-	
+
 	@Test
 	public void factorial_of_5_is_120() {
 		Revision r = new Revision();
 		assertEquals(120,r.factorial(5));
 	}
+
+	@Test
+	public void add_1_increments_allItems_by_1(){
+		Revision r = new Revision();
+		int[] x = {9,8,42,31,12};
+		int[] y = {10,9,43,32,13};
+		r.add(x,1);
+		for (int i = 0; i < x.length; i++) {
+			assertEquals(x[i] ,y[i]);
+		}
+	}
+
+	@Test
+	public void add_5_increments_allItems_by_5(){
+		Revision r = new Revision();
+		int[] x = {9,8,42,31,12};
+		int[] y = {14,13,47,36,17};
+		r.add(x,5);
+		for (int i = 0; i < x.length; i++) {
+			assertEquals(x[i] ,y[i]);
+		}
+	};
 }
