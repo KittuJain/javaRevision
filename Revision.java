@@ -8,4 +8,8 @@ public class Revision {
 
 		return fibonacci(index-1) + fibonacci(index-2);
 	}
+
+	public int factorial (int number){
+		return (number <= 0) ? 1 : number * factorial(number-1);
+	}
 }
