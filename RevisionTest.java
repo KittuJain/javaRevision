@@ -3,25 +3,25 @@ import static org.junit.Assert.*;
 
 public class RevisionTest{
 	@Test
-	public void fibonacci_of_5_gives_3() {
+	public void fibonacci_of_5_gives_3 () {
 		Revision r = new Revision();
 		assertEquals(3,r.fibonacci(5));
 	}
 
 	@Test
-	public void factorial_of_1_is_1() {
+	public void factorial_of_1_is_1 () {
 		Revision r = new Revision();
 		assertEquals(1,r.factorial(1));
 	}
 
 	@Test
-	public void factorial_of_5_is_120() {
+	public void factorial_of_5_is_120 () {
 		Revision r = new Revision();
 		assertEquals(120,r.factorial(5));
 	}
 
 	@Test
-	public void add_1_increments_allItems_by_1(){
+	public void add_1_increments_allItems_by_1 (){
 		Revision r = new Revision();
 		int[] x = {9,8,42,31,12};
 		int[] y = {10,9,43,32,13};
@@ -32,7 +32,7 @@ public class RevisionTest{
 	}
 
 	@Test
-	public void add_5_increments_allItems_by_5(){
+	public void add_5_increments_allItems_by_5 (){
 		Revision r = new Revision();
 		int[] x = {9,8,42,31,12};
 		int[] y = {14,13,47,36,17};
@@ -40,5 +40,5 @@ public class RevisionTest{
 		for (int i = 0; i < x.length; i++) {
 			assertEquals(x[i] ,y[i]);
 		}
-	};
+	}
 }

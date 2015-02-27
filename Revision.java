@@ -14,7 +14,7 @@ public class Revision {
 
 	public int[] add (int[] numbers, int toBeIncrementBy) {
 		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = numbers[i]+toBeIncrementBy;
+			numbers[i] = numbers[i] + toBeIncrementBy;
 		}
 		return numbers;
 	}
