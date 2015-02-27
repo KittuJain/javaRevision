@@ -41,4 +41,14 @@ public class RevisionTest{
 			assertEquals(x[i] ,y[i]);
 		}
 	}
+
+	@Test
+	public void readBinary_reads_numbers_as_binary () {
+		Revision r = new Revision();
+		assertEquals(0,r.readBinary(0));
+		assertEquals(1,r.readBinary(1));
+		assertEquals(2,r.readBinary(10));
+		assertEquals(9,r.readBinary(1001));
+		assertEquals(255,r.readBinary(11111111));
+	}
 }

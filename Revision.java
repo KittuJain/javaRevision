@@ -18,4 +18,17 @@ public class Revision {
 		}
 		return numbers;
 	}
+
+	public int readBinary(int binaryNumber){
+		int decimalNumber = 0;
+		int i = 0;
+		while(binaryNumber > 0){
+			int remainder = binaryNumber % 10;
+			int remOfOneDigit = remainder*(int)Math.pow(2,i);
+			decimalNumber = decimalNumber + remOfOneDigit;
+			binaryNumber = binaryNumber/10;
+			i++;
+		}
+		return decimalNumber;
+	}
 }
