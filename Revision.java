@@ -14,7 +14,7 @@ public class Revision {
 
 	public int[] add (int[] numbers, int toBeIncrementBy) {
 		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = numbers[i] + toBeIncrementBy;
+			numbers[i] += toBeIncrementBy;
 		}
 		return numbers;
 	}
@@ -25,10 +25,25 @@ public class Revision {
 		while(binaryNumber > 0){
 			int remainder = binaryNumber % 10;
 			int remOfOneDigit = remainder*(int)Math.pow(2,i);
-			decimalNumber = decimalNumber + remOfOneDigit;
-			binaryNumber = binaryNumber/10;
+			decimalNumber += remOfOneDigit;
+			binaryNumber /= 10;
 			i++;
 		}
 		return decimalNumber;
+	}
+
+	public int[] convertToBinary(int decimalNumber){
+		int[] binaryNumber = new int[25];
+		int index = 0;
+		while(decimalNumber > 0){
+			binaryNumber[index] = decimalNumber % 2;
+			decimalNumber /= 2;
+		}
+		int[] number = new int[index+1];
+		for (int count = 0; count <= index; count++) {
+			number[count] = binaryNumber[index];
+			index--;
+		}
+		return number;
 	}
 }

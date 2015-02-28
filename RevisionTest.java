@@ -51,4 +51,15 @@ public class RevisionTest{
 		assertEquals(9,r.readBinary(1001));
 		assertEquals(255,r.readBinary(11111111));
 	}
+
+	@Test
+	public void convertToBinary_converts_number_to_binary () {
+		Revision r = new Revision();
+		assertEquals(0, r.convertToBinary(0)[0]);
+		assertEquals(1, r.convertToBinary(1)[0]);
+		// assertEquals(10, r.convertToBinary(2)[0]);
+		// assertEquals(1001, r.convertToBinary(9));
+		// assertEquals(11111111, r.convertToBinary(255)[0]);
+	}
+	
 }
