@@ -46,4 +46,17 @@ public class Revision {
 		}
 		return number;
 	}
+
+	public int readOctal(int octalNumber){
+		int decimalNumber = 0;
+		int i = 0;
+		while(octalNumber > 0){
+			int remainder = octalNumber % 10;
+			int remOfOneDigit = remainder*(int)Math.pow(8,i);
+			decimalNumber += remOfOneDigit;
+			octalNumber /= 10;
+			i++;
+		}
+		return decimalNumber;
+	}
 }
